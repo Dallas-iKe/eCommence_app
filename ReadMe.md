@@ -26,30 +26,6 @@ This is a React-based eCommerce application that allows users to browse products
 - Node.js (v14 or higher)
 - npm or yarn
 
-### Project Structure
-
-ecommerce-app/client
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── SearchBar.jsx
-│   │   └── ...
-│   ├── contexts/
-│   │   └── ShopContext.jsx
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Collection.jsx
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
-
 GitHub Copilot
 Sure, here's a basic README for your eCommerce application:
 
