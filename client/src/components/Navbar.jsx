@@ -1,16 +1,20 @@
 import React, { use, useContext } from 'react';
 import { useState } from 'react';
 import { assets } from '../assets/assets';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { ShopContext } from '../contexts/ShopContext';
 
 const Navbar = () => {
   
   const [visible, setVisible] = useState(false);
   const {setShowSearch, getCartCount} = useContext(ShopContext);
+  const navigate = useNavigate();
+
 
      const toggleShowSearch = () => {
       setShowSearch(prevState => !prevState);  
+      navigate('/collection');
+
       }
 
   return (
@@ -49,11 +53,13 @@ const Navbar = () => {
             <img onClick={()=>toggleShowSearch()} src={assets.search_icon} className='w-5 cursor-pointer' alt="search icon" />
 
             <div className='group relative'>
-        <img src={assets.profile_icon} className='w-5 cursor-pointer' alt="profile icon" />
+        <Link to={'/login'}> 
+         <img src={assets.profile_icon} className='w-5 cursor-pointer' alt="profile icon" />
+        </Link>
         <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
             <div className='flex flex-col gap-2 w-36 py-3 px-5 text-gray-500 rounded bg-slate-100'>
-                <p className='cursor-pointer  hover:text-black'>My Profile</p>
-                <p className='cursor-pointer  hover:text-black'>Orders</p>
+               <Link to={'/login'}> <p className='cursor-pointer  hover:text-black'>My Profile</p> </Link>
+                <Link to={'/orders'}> <p className='cursor-pointer  hover:text-black'>Orders</p> </Link>
                 <p className='cursor-pointer  hover:text-black'>Logout</p>
             </div>
         </div>
