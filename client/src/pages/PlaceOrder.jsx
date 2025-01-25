@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Title from '../components/Title'
-import CartTotal from '../components/cartTotal'
+import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
 import { ShopContext } from '../contexts/ShopContext'
 
@@ -21,8 +21,8 @@ const PlaceOrder = () => {
           <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='First Name'/>
           <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Last Name'/>
         </div>
-        <input className='border border-gray300 rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email Address'/>
-        <input className='border border-gray300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Street'/>
+        <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email Address'/>
+        <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Street'/>
         <div className='flex gap-3'>
           <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='City'/>
           <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='State'/>
